@@ -178,11 +178,20 @@ section {
 }
 
 /* Responsive Fixes */
-@media (max-width: 768px) {
-  .nav-links {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
+@media (max-width: 600px) {
+    .text-content h2 {
+        font-size: 2rem;
+    }
+
+    .text-content p {
+        font-size: 1rem;
+    }
+
+    .profile-image img {
+        width: 150px;
+        height: 150px;
+    }
+}
 
   .skills-container {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));

@@ -1,3 +1,6 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@400;600&display=swap');
+
 /* General Styles */
 body {
   font-family: 'Lato', sans-serif;
@@ -121,17 +124,21 @@ section {
 }
 
 /* About, Experience, Education, Contact Cards */
-.about-text, .timeline-item, .education-card, .contact-info {
+.about-text,
+.timeline-item,
+.education-card,
+.contact-info {
   background: #fff;
   padding: 20px;
   margin: 20px auto;
   border-radius: 15px;
   max-width: 800px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 /* Timeline and Experience */
-.timeline-item h3, .education-card h3 {
+.timeline-item h3,
+.education-card h3 {
   color: #c471ed;
   margin-bottom: 5px;
 }
@@ -144,30 +151,32 @@ section {
 /* Skills Section */
 .skills-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 15px;
   max-width: 900px;
   margin: 0 auto;
+  padding: 10px;
 }
 
 .skill {
   background: #fce4ec;
   color: #8e44ad;
-  padding: 12px;
+  padding: 15px 10px;
   border-radius: 10px;
   text-align: center;
   font-weight: bold;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  word-wrap: break-word;
 }
 
-/* Projects */
+/* Projects Section */
 #projects p {
   color: #555;
   text-align: center;
   font-size: 1.1rem;
 }
 
-/* Contact */
+/* Contact Section */
 .contact-info a {
   color: #c471ed;
   text-decoration: none;
@@ -186,6 +195,13 @@ section {
 
   .skills-container {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .skill {
+    padding: 12px 8px;
+    font-size: 0.9rem;
   }
 
   .text-content h2 {

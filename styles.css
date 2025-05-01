@@ -119,7 +119,7 @@ section h2 {
 /* Section Layout */
 section {
   padding: 60px 20px;
-  scroll-margin-top: 100px; /* Fix for contact section cutoff */
+  scroll-margin-top: 4px; /* Fix for contact section cutoff */
 }
 
 /* Cards */

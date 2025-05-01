@@ -1,7 +1,6 @@
-/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@400;600&display=swap');
 
-/* General Styles */
+/* Base Styling */
 body {
   font-family: 'Lato', sans-serif;
   margin: 0;
@@ -109,7 +108,7 @@ header {
   background: linear-gradient(to right, #af54cc, #ee3e4f);
 }
 
-/* Section Headings */
+/* Section Titles */
 section h2 {
   text-align: center;
   font-size: 2rem;
@@ -118,12 +117,12 @@ section h2 {
   margin-bottom: 30px;
 }
 
-/* Section General */
+/* Section Layout */
 section {
   padding: 60px 20px;
 }
 
-/* About, Experience, Education, Contact Cards */
+/* Content Cards */
 .about-text,
 .timeline-item,
 .education-card,
@@ -136,7 +135,6 @@ section {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-/* Timeline and Experience */
 .timeline-item h3,
 .education-card h3 {
   color: #c471ed;
@@ -151,22 +149,27 @@ section {
 /* Skills Section */
 .skills-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
   max-width: 900px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 0 20px;
 }
 
 .skill {
   background: #fce4ec;
   color: #8e44ad;
-  padding: 15px 10px;
-  border-radius: 10px;
+  padding: 15px;
+  border-radius: 12px;
   text-align: center;
   font-weight: bold;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   word-wrap: break-word;
+  transition: transform 0.3s ease;
+}
+
+.skill:hover {
+  transform: translateY(-5px);
 }
 
 /* Projects Section */
@@ -176,7 +179,7 @@ section {
   font-size: 1.1rem;
 }
 
-/* Contact Section */
+/* Contact */
 .contact-info a {
   color: #c471ed;
   text-decoration: none;
@@ -193,17 +196,6 @@ section {
     gap: 10px;
   }
 
-  .skills-container {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 10px;
-    padding: 0 10px;
-  }
-
-  .skill {
-    padding: 12px 8px;
-    font-size: 0.9rem;
-  }
-
   .text-content h2 {
     font-size: 2rem;
   }
@@ -211,5 +203,18 @@ section {
   .profile-image img {
     width: 130px;
     height: 130px;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 0 15px;
+  }
+
+  .skill {
+    padding: 12px 8px;
+    font-size: 0.9rem;
   }
 }

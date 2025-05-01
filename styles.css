@@ -147,13 +147,23 @@ section {
 
 /* Skills Section */
 .skills-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 16px;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
+
+.skill-box {
+  background-color: #f9e6f9;
+  color: #6a1b9a;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  flex: 1 1 auto;
+}
+
 
 .skill {
   background: #fce4ec;

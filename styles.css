@@ -12,7 +12,7 @@ body {
 /* Header */
 header {
   background: #fff;
-  padding: 15px 20px;
+  padding: 15px 0px;
   position: fixed;
   width: 100%;
   top: 0;
@@ -34,7 +34,7 @@ header {
   list-style: none;
   display: flex;
   gap: 20px;
-  margin: 0;
+  margin: -10;
   padding: 0;
 }
 

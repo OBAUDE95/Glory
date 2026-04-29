@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glory Nathaniel - Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">Glory Nathaniel</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </header>
+
+  <section id="hero">
+    <div class="hero-content">
+      <div class="text-content">
+        <h1>   </h1>
+        <h1>Hello, I'm</h1>
+        <h2>Glory Nathaniel</h2>
+        <p>Empowering people through media, connection, and purpose.</p>
+        <a href="glory-nathaniel-resume.pdf" class="btn">Download Resume</a>
+      </div>
+      <div class="profile-image">
+        <img src="glory.jpg" alt="Glory Nathaniel" />
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-container">
+      <div class="about-text">
+        <p>I am a versatile professional with expertise in media production, customer service, and community engagement. I bring a strong background in visual content creation, event coordination, and communications. My work experience spans organizations such as ECOWAS, where I supported audiovisual operations and public relations. With certifications in forensic studies, intelligence, and virtual assistance, I thrive in dynamic, team-oriented environments and enjoy making a meaningful impact.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Work Experience</h2>
+    <div class="timeline-item">
+      <h3>Audio Visual Assistant</h3>
+      <p class="date">2024 – Present | ECOWAS</p>
+      <p>Supported media teams in editing images for publications, managed press releases, and represented the audiovisual department at events.</p>
+    </div>
+    <div class="timeline-item">
+      <h3>Head of Customer Care Service</h3>
+      <p class="date">2024 | Top Rank Global Project Ltd</p>
+      <p>Led a customer support team, managed inquiries, gathered client feedback, and improved service workflows.</p>
+    </div>
+    <div class="timeline-item">
+      <h3>Virtual Assistant – Legal Industry</h3>
+      <p class="date">2024</p>
+      <p>Handled scheduling, budgeting, document prep, and client coordination for a law practice.</p>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education & Certifications</h2>
+    <div class="education-card">
+      <h3>The Federal Polytechnic, Bida</h3>
+      <p>HND in Mass Communication (2022)</p>
+    </div>
+    <div class="education-card">
+      <h3>College of Detectives Investigation</h3>
+      <p>Basic Intelligence & Detective Studies (2023)</p>
+    </div>
+    <div class="education-card">
+      <h3>Advanced Peace & Reconciliation Centre</h3>
+      <p>Managerial Certificate in Peace & Security Studies (2023)</p>
+    </div>
+    <div class="education-card">
+      <h3>ALX</h3>
+      <p>Virtual Assistance Training (Expected 2025)</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <div class="skill">Google Workspace</div>
+      <div class="skill">Corel Draw</div>
+      <div class="skill">Canva</div>
+      <div class="skill">Content Creation</div>
+      <div class="skill">Photo Editing</div>
+      <div class="skill">ChatGPT</div>
+      <div class="skill">Team Coordination</div>
+      <div class="skill">Public Speaking</div>
+      <div class="skill">Community Engagement</div>
+      <div class="skill">Market Analysis</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <p style="text-align:center; color:#666;">Portfolio projects coming soon.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-info">
+      <p>Email: <a href="mailto:nathanielglory031@gmail.com">nathanielglory031@gmail.com</a></p>
+      <p>Phone: <a href="tel:+2348155285170">+234 815 528 5170</a></p>
+      <p>Location: Abuja, Nigeria</p>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.from('.text-content h1, .text-content h2, .text-content p', {
+        y: 40,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.2,
+        ease: 'power3.out',
+      });
+
+      gsap.from('#about .about-text', {
+        scrollTrigger: {
+          trigger: '#about',
+          start: 'top 80%',
+        },
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        ease: 'power2.out'
+      });
+
+      gsap.utils.toArray('.timeline-item').forEach((item, index) => {
+        gsap.from(item, {
+          scrollTrigger: {
+            trigger: item,
+            start: 'top 85%',
+          },
+          y: 60,
+          opacity: 0,
+          duration: 0.8,
+          delay: index * 0.1,
+          ease: 'power2.out'
+        });
+      });
+
+      gsap.utils.toArray('.education-card').forEach((card, index) => {
+        gsap.from(card, {
+          scrollTrigger: {
+            trigger: card,
+            start: 'top 85%',
+          },
+          y: 60,
+          opacity: 0,
+          duration: 0.8,
+          delay: index * 0.1,
+          ease: 'power2.out'
+        });
+      });
+
+      gsap.from('.skill', {
+        scrollTrigger: {
+          trigger: '#skills',
+          start: 'top 80%',
+        },
+        y: 40,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.1,
+        ease: 'power3.out'
+      });
+
+      gsap.from('.contact-info', {
+        scrollTrigger: {
+          trigger: '#contact',
+          start: 'top 85%',
+        },
+        y: 40,
+        opacity: 0,
+        duration: 1,
+        ease: 'power2.out'
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.skill-pill {
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: default;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .skill-pill {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+  }
+}
